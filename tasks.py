@@ -38,7 +38,7 @@ def create_task(current_user):
     )
 
     db.session.add(new_task)
-    db.session.commit
+    db.session.commit()
 
     return jsonify({'message':'Task created','id': new_task.id}), 201
 
